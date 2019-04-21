@@ -8,7 +8,6 @@ class Charge(Resource):
         self.base_url = URL.CHARGE_URL
 
     def create(self, data={}, **kwargs):
-        import pdb;pdb.set_trace()
         url = self.base_url
         self.post_url(url, data, **kwargs)
 
