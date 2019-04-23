@@ -11,3 +11,8 @@ class AmountMismatchError(Exception):
 class ServerError(Exception):
     def __init__(self, message=None, *args, **kwargs):
         super(ServerError, self).__init__(message)
+
+
+class AuthError(Exception):
+    def __init__(self, message=None, *args, **kwargs):
+        super(AuthError, self).__init__(message)

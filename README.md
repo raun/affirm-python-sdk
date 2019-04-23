@@ -1,6 +1,8 @@
 # Affirm Python SDK
 
-Affirm Python SDK is a client library to interact with [Affirm](https://www.affirm.com/). 
+Affirm Python SDK is a client library to interact with [Affirm](https://www.affirm.com/). For API reference: https://docs.affirm.com/Integrate_Affirm/Direct_API/Affirm_API_Reference
+
+Affirm helps customers to pay over time for things they want to buy. The customers are in control of how long you get to make monthly payments. They do the approval process in minutes. This client will help you integrate with Affirm.
 
 
 # Usage

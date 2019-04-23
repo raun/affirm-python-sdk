@@ -3,7 +3,7 @@ import requests
 
 from types import ModuleType
 
-from affirm.errors import AmountMismatchError
+from affirm.errors import AmountMismatchError, AuthError
 from .constants import HTTP_STATUS_CODE, ERROR_CODE, URL
 
 from . import resources
@@ -81,12 +81,12 @@ class Client:
             if 'message' in json_response:
                 msg = str(json_response['message'])
 
-            if code == ERROR_CODE.AUTH_DECLINE:
+            if code in ERROR_CODE.BAD_REQUEST_CODES:
                 raise BadRequestError(msg)
-            elif code == ERROR_CODE.REQUESTING_HIGHER_CAPTURE:
+            elif code in ERROR_CODE.AMOUNT_MISMATCH_CODES:
                 raise AmountMismatchError(msg)
-            elif code == ERROR_CODE.CAPTURE_UNEQUAL_AMOUNT:
-                raise AmountMismatchError(msg)
+            elif code in ERROR_CODE.BAD_AUTH_CRED_CODE:
+                raise AuthError(msg)
             else:
                 raise ServerError(msg)
 

@@ -3,13 +3,13 @@ from distutils.core import setup
 setup(
     name='affirm-pay',
     packages=['affirm'],
-    version='0.1',
+    version='0.3',
     license='MIT',
     description='Python Client for Affirm',
     author='Anshul Sharma',
     author_email='anshul.jmi@gmail.com',
     url='https://github.com/raun/affirm-python-sdk',
-    download_url='https://github.com/raun/affirm-python-sdk/archive/v_01.tar.gz',
+    download_url='https://github.com/raun/affirm-python-sdk/archive/v_03.tar.gz',
     keywords=['AFFIRM', 'SDK', 'CLIENT', 'INTEGRATION'],
     install_requires=[
         'requests',
