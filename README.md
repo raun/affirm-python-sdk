@@ -38,5 +38,12 @@ Affirm Python SDK is a client library to interact with [Affirm](https://www.affi
     from affirm import Client
     client = Client(auth=(<PUBLIC_API_KEY>, <PRIVATE_API_KEY>))
     resp = client.charge.void(charge_id=<CHARGE_ID>, order_id=<YOUR_GENERATED_ORDER_ID>)
+
+## Using the client for Production(or live)
+The only change you need to make pass a `prod` keyward while to client creation step.
+
+    from affirm import Client
+    client = Client(auth=(<PUBLIC_API_KEY>, <PRIVATE_API_KEY>), prod=True)
+
     
 If you have any questions please shoot a mail to anshul[dot]jmi[at]gmail[dot]com.
