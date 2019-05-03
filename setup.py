@@ -1,9 +1,11 @@
 from distutils.core import setup
 
+from setuptools import find_packages
+
 setup(
     name='affirm-pay',
-    packages=['affirm'],
-    version='0.3',
+    packages=find_packages(),
+    version='0.4',
     license='MIT',
     description='Python Client for Affirm',
     author='Anshul Sharma',
