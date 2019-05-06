@@ -54,7 +54,7 @@ class Client:
             base_url = options['base_url']
             del(options['base_url'])
 
-        if 'prod' in options:
+        if 'prod' in options and options.get('prod'):
             base_url = URL.BASE_PROD_URL
 
         return base_url
