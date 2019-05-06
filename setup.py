@@ -2,16 +2,23 @@ from distutils.core import setup
 
 from setuptools import find_packages
 
+from os import path
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md')) as f:
+    long_description = f.read()
+
 setup(
     name='affirm-pay',
     packages=find_packages(),
-    version='0.4',
+    version='0.6',
     license='MIT',
     description='Python Client for Affirm',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author='Anshul Sharma',
     author_email='anshul.jmi@gmail.com',
     url='https://github.com/raun/affirm-python-sdk',
-    download_url='https://github.com/raun/affirm-python-sdk/archive/v_03.tar.gz',
+    download_url='https://github.com/raun/affirm-python-sdk/archive/v_05.tar.gz',
     keywords=['AFFIRM', 'SDK', 'CLIENT', 'INTEGRATION'],
     install_requires=[
         'requests',
