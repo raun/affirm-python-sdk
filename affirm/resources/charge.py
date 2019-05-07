@@ -9,20 +9,20 @@ class Charge(Resource):
 
     def create(self, data={}, **kwargs):
         url = self.base_url
-        self.post_url(url, data, **kwargs)
+        return self.post_url(url, data, **kwargs)
 
     def void(self, charge_id=None, **kwargs):
         url = "{}{}/void".format(self.base_url, charge_id)
-        self.post_url(url, {}, **kwargs)
+        return self.post_url(url, {}, **kwargs)
 
     def refund(self, charge_id=None, **kwargs):
         url = "{}{}/refund".format(self.base_url, charge_id)
-        self.post_url(url, {}, **kwargs)
+        return self.post_url(url, {}, **kwargs)
 
     def capture(self, charge_id=None, **kwargs):
         url = "{}{}/capture".format(self.base_url, charge_id)
-        self.post_url(url, {}, **kwargs)
+        return self.post_url(url, {}, **kwargs)
 
     def update(self, charge_id=None, **kwargs):
         url = "{}{}/update".format(self.base_url, charge_id)
-        self.post_url(url, {}, **kwargs)
+        return self.post_url(url, {}, **kwargs)
